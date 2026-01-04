@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Perchera del Rey</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="crown">👑</span>
+      <div>
+        <div class="title">Perchera del Rey</div>
+        <div class="subtitle">Ropa cristiana con propósito</div>
+      </div>
+    </div>
+
+    <nav class="actions">
+      <button id="btnCart" class="btn ghost">🛒 Carrito <span id="cartCount" class="pill">0</span></button>
+      <button id="btnLogin" class="btn">Ingresar</button>
+    </nav>
+  </header>
+
+  <main class="grid">
+    <section class="card hero">
+      <h1>Diseña tu polera ✨</h1>
+      <p>Arrastra tu diseño sobre la polera, ajústalo y deja que se vea como bendición, no como borrador.</p>
+      <div class="heroRow">
+        <div class="uploader">
+          <label class="file">
+            <input id="designFile" type="file" accept="image/*" />
+            <span>Subir diseño (PNG/JPG)</span>
+          </label>
+
+          <div class="controls">
+            <button id="btnReset" class="btn ghost">Reset</button>
+            <button id="btnAddToCart" class="btn">Agregar al carrito</button>
+          </div>
+
+          <div class="hint">
+            Tip: usa PNG con fondo transparente para que quede pro.
+          </div>
+        </div>
+
+        <div class="preview">
+          <canvas id="designer" width="520" height="620"></canvas>
+          <div class="micro">
+            Arrastra, rueda del mouse para zoom, y mantén <b>Shift</b> + rueda para rotar.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card catalog">
+      <div class="row">
+        <h2>Catálogo</h2>
+        <span class="tag">MVP</span>
+      </div>
+
+      <div id="products" class="products"></div>
+    </section>
+  </main>
+
+  <!-- Drawer carrito -->
+  <aside id="cartDrawer" class="drawer">
+    <div class="drawerHeader">
+      <h3>Tu carrito</h3>
+      <button id="btnCloseCart" class="btn ghost">Cerrar</button>
+    </div>
+    <div id="cartItems" class="drawerBody"></div>
+    <div class="drawerFooter">
+      <div class="total">
+        <span>Total</span>
+        <b id="cartTotal">$0</b>
+      </div>
+      <button id="btnCheckout" class="btn full">Continuar</button>
+      <div class="micro">En el MVP, “checkout” será demo. Luego conectamos órdenes a la DB.</div>
+    </div>
+  </aside>
+
+  <div id="backdrop" class="backdrop"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
