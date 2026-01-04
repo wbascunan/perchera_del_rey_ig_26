@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Carrito | Perchera del Rey</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbarInner">
+      <a class="brand" href="index.html">
+        <div class="crown">👑</div>
+        <div>
+          <div class="title">Perchera del Rey</div>
+          <div class="subtitle">Carrito</div>
+        </div>
+      </a>
+      <nav class="nav">
+        <a class="btn ghost" href="index.html">← Seguir comprando</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="row">
+        <h2 style="margin:0">Tu carrito</h2>
+        <span class="tag">Invitado (localStorage)</span>
+      </div>
+
+      <div id="cartList" class="cartList"></div>
+
+      <div class="cartTotal">
+        <span>Total</span>
+        <b id="total">$0</b>
+      </div>
+
+      <div style="height:10px"></div>
+      <button class="btn full" id="checkout">Continuar</button>
+      <div class="micro" style="margin-top:8px">
+        En el MVP el checkout es demo. Luego conectamos órdenes + usuarios (Supabase).
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/cart.js"></script>
+</body>
+</html>

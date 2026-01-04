@@ -3,84 +3,235 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Perchera del Rey</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Percha del Rey</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">
-      <span class="crown">👑</span>
-      <div>
-        <div class="title">Perchera del Rey</div>
-        <div class="subtitle">Ropa cristiana con propósito</div>
+    <div class="topbarInner">
+      <a class="brand" href="index.html">
+        <div class="logoMark">👑</div>
+        <div>
+          <div class="title">Percha del Rey</div>
+          <div class="subtitle">Tu tienda favorita.</div>
+        </div>
+      </a>
+
+      <div class="searchWrap">
+        <input id="searchInput" class="search" type="search" placeholder="Buscar por nombre, tag o categoría…" />
+        <button id="searchBtn" class="iconBtn" aria-label="Buscar">⌕</button>
+      </div>
+
+      <nav class="nav">
+        <a class="btn ghost" href="cart.html">🛒 Carrito <span id="cartCount" class="pill">0</span></a>
+        <button class="btn ghost" id="btnLogin">👤 Ingresar</button>
+      </nav>
+    </div>
+
+  </header>
+
+  <!-- Botón flotante -->
+  <a class="btn fab" href="product.html?id=tee-gracia">✨ Personaliza</a>
+
+  <main class="container">
+    <!-- HERO: modelo al centro + texto alrededor -->
+<section class="hero card" id="hero">
+  <div class="heroGrid">
+    <!-- Izquierda: texto -->
+    <div class="heroCopy">
+      <p class="heroKicker">Percha del Rey</p>
+      <h1 class="heroTitle">Descubre tu próxima prenda TOP</h1>
+      <p class="heroDesc muted">
+        Ropa, tazas y bolsos cristianos.
+      </p>
+
+      <div class="heroActions">
+        <a class="btn" href="#catalogo">Ver catálogo</a>
+        <a class="btn soft" href="product.html?id=tee-gracia">Personalizar ahora</a>
+      </div>
+
+      <div class="heroMeta">
+        <span class="metaPill">🚚 Envíos a Chile</span>
+        <span class="metaPill">✨ Personalización</span>
+        <span class="metaPill">🛡️ Compra segura por WhatsApp</span>
       </div>
     </div>
 
-    <nav class="actions">
-      <button id="btnCart" class="btn ghost">🛒 Carrito <span id="cartCount" class="pill">0</span></button>
-      <button id="btnLogin" class="btn">Ingresar</button>
-    </nav>
-  </header>
+    <!-- Centro: modelo -->
+    <div class="heroModel">
+      <img src="assets/img/ropa/modelo1.png" alt="Modelo Percha del Rey" />
+      <div class="heroGlow" aria-hidden="true"></div>
+    </div>
 
-  <main class="grid">
-    <section class="card hero">
-      <h1>Diseña tu polera ✨</h1>
-      <p>Arrastra tu diseño sobre la polera, ajústalo y deja que se vea como bendición, no como borrador.</p>
-      <div class="heroRow">
-        <div class="uploader">
-          <label class="file">
-            <input id="designFile" type="file" accept="image/*" />
-            <span>Subir diseño (PNG/JPG)</span>
-          </label>
+    <!-- Derecha: cards -->
+    <aside class="heroSide">
+      <article class="heroCard">
+        <div class="heroCardTitle">Nueva colección</div>
+        <p class="muted">Diseños limpios, premium, listos para combinar.</p>
+        <a class="linkLike" href="#car-nueva">Ver lanzamientos →</a>
+      </article>
 
-          <div class="controls">
-            <button id="btnReset" class="btn ghost">Reset</button>
-            <button id="btnAddToCart" class="btn">Agregar al carrito</button>
-          </div>
+      <article class="heroCard">
+        <div class="heroCardTitle">Personaliza</div>
+        <p class="muted">Sube tu diseño, ajusta y guárdalo para el carrito.</p>
+        <a class="linkLike" href="product.html?id=tee-gracia">Ir al personalizador →</a>
+      </article>
 
-          <div class="hint">
-            Tip: usa PNG con fondo transparente para que quede pro.
-          </div>
-        </div>
+      <article class="heroCard heroCardSmall">
+        <div class="heroCardTitle">Top ventas</div>
+        <p class="muted">Poleras “Gracia”, tazas con versículos y tote bags.</p>
+      </article>
+    </aside>
+  </div>
+</section>
+<br>
+<br>
+<!-- =========================
+     CARRUSELES DOBLES
+========================= -->
+<section class="dualCarousels">
 
-        <div class="preview">
-          <canvas id="designer" width="520" height="620"></canvas>
-          <div class="micro">
-            Arrastra, rueda del mouse para zoom, y mantén <b>Shift</b> + rueda para rotar.
-          </div>
-        </div>
+  <!-- Carrusel IZQUIERDA: Nueva colección -->
+  <section class="card" id="car-nueva">
+    <div class="sectionHead">
+      <div>
+        <h2>Nueva colección</h2>
+        <p class="muted">Lanzamientos y destacados recientes.</p>
       </div>
-    </section>
+    </div>
 
-    <section class="card catalog">
-      <div class="row">
-        <h2>Catálogo</h2>
-        <span class="tag">MVP</span>
+    <div class="carouselShell">
+      <div class="carousel" data-carousel="new">
+        <div class="carouselTrack" data-track>
+
+          <div class="slide">
+            <div class="slideImg" style="background-image: url('assets/img/ropa/modelo2.png');"></div>
+            <div class="slideText">
+              <div class="slideTitle">Colección “Gracia”</div>
+              <div class="slideSub">Minimal premium, limpia, elegante.</div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slideImg" style="background-image: url('assets/img/bolsos/bolso1.png');"></div>
+            <div class="slideText">
+              <div class="slideTitle">Colección “Luz”</div>
+              <div class="slideSub">Bolsos tote para el día a día.</div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slideImg" style="background-image: url('assets/img/tazas/taza1.png');"></div>
+            <div class="slideText">
+              <div class="slideTitle">Tazas con versículos</div>
+              <div class="slideSub">Regalos con intención.</div>
+            </div>
+          </div>
+
+        </div>
+        <button class="carBtn left" data-prev>‹</button>
+        <button class="carBtn right" data-next>›</button>
+        <div class="dots" data-dots></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carrusel DERECHA: Personaliza -->
+  <section class="card" id="car-personaliza">
+    <div class="sectionHead">
+      <div>
+        <h2>Personaliza</h2>
+        <p class="muted">Tu diseño sobre el producto. Preview listo para carrito.</p>
+      </div>
+      <a class="btn soft" href="product.html?id=tee-gracia">Ir al personalizador</a>
+    </div>
+
+    <div class="carouselShell">
+      <div class="carousel" data-carousel="custom">
+        <div class="carouselTrack" data-track>
+
+          <div class="slide">
+            <div class="slideImg" style="background-image: url('assets/img/ropa/personaliza1.png');"></div>
+            <div class="slideText">
+              <div class="slideTitle">Sube tu diseño</div>
+              <div class="slideSub">PNG recomendado para look pro.</div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slideImg" style="background-image: url('assets/img/ropa/personaliza2.png');"></div>
+            <div class="slideText">
+              <div class="slideTitle">Ajusta y centra</div>
+              <div class="slideSub">Zoom, rotación y área de impresión.</div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slideImg" style="background-image: url('assets/img/ropa/personaliza3.png');"></div>
+            <div class="slideText">
+              <div class="slideTitle">Agrega al carrito</div>
+              <div class="slideSub">Se guarda un preview para la orden.</div>
+            </div>
+          </div>
+
+        </div>
+        <button class="carBtn left" data-prev>‹</button>
+        <button class="carBtn right" data-next>›</button>
+        <div class="dots" data-dots></div>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<br>
+  
+    <!-- Catálogo + filtros -->
+    <section class="card" id="catalogo">
+      <div class="sectionHead">
+        <div>
+          <h2>Catálogo</h2>
+          <p class="muted">Filtra por tipo de producto, talla (ropa) y ordena.</p>
+        </div>
+        <div class="filters">
+          <select id="typeFilter" class="select">
+            <option value="all">Todos</option>
+            <option value="ropa">Ropa</option>
+            <option value="taza">Tazas</option>
+            <option value="bolso">Bolsos</option>
+          </select>
+
+          <select id="sizeFilter" class="select">
+            <option value="all">Todas las tallas</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+
+          <select id="sortSelect" class="select">
+            <option value="reco">Recomendado</option>
+            <option value="priceAsc">Precio: menor a mayor</option>
+            <option value="priceDesc">Precio: mayor a menor</option>
+            <option value="nameAsc">Nombre: A → Z</option>
+          </select>
+        </div>
       </div>
 
       <div id="products" class="products"></div>
     </section>
+
+    <footer class="footer">
+      <div class="footerGrid">
+        <div>
+          <div class="footerTitle">Percha del Rey</div>
+          <div class="muted">Tu tienda favorita.</div>
+        </div>
+        <div class="muted">© <span id="year"></span> Designed by @w.bascunan20</div>
+      </div>
+    </footer>
   </main>
 
-  <!-- Drawer carrito -->
-  <aside id="cartDrawer" class="drawer">
-    <div class="drawerHeader">
-      <h3>Tu carrito</h3>
-      <button id="btnCloseCart" class="btn ghost">Cerrar</button>
-    </div>
-    <div id="cartItems" class="drawerBody"></div>
-    <div class="drawerFooter">
-      <div class="total">
-        <span>Total</span>
-        <b id="cartTotal">$0</b>
-      </div>
-      <button id="btnCheckout" class="btn full">Continuar</button>
-      <div class="micro">En el MVP, “checkout” será demo. Luego conectamos órdenes a la DB.</div>
-    </div>
-  </aside>
-
-  <div id="backdrop" class="backdrop"></div>
-
-  <script src="app.js"></script>
+  <script type="module" src="js/home.js"></script>
 </body>
 </html>

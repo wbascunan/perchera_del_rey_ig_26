@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Producto | Perchera del Rey</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbarInner">
+      <a class="brand" href="index.html">
+        <div class="logoMark">👑</div>
+        <div>
+          <div class="title">Perchera del Rey</div>
+          <div class="subtitle">Producto</div>
+        </div>
+      </a>
+
+      <div class="searchWrap">
+        <input class="search" type="search" placeholder="Busca en la tienda…" disabled />
+        <button class="iconBtn" aria-label="Buscar" disabled>⌕</button>
+      </div>
+
+      <nav class="nav">
+        <a class="btn ghost" href="cart.html">🛒 Carrito <span id="cartCount" class="pill">0</span></a>
+        <a class="btn ghost" href="index.html">← Volver</a>
+      </nav>
+    </div>
+  </header>
+
+  <a class="btn fab" href="product.html?id=tee-gracia">✨ Personaliza</a>
+
+  <main class="container">
+    <div class="breadcrumbs" id="breadcrumbs"></div>
+
+    <section class="card">
+      <div class="productLayout">
+        <!-- Left: mockup + canvas -->
+        <div class="gallery">
+          <canvas id="designer" width="520" height="620" aria-label="Vista del producto"></canvas>
+          <div class="micro">Si es ropa, puedes personalizar (subir diseño) y se guardará preview.</div>
+        </div>
+
+        <!-- Right: info -->
+        <div>
+          <div class="pcRow">
+            <h2 id="pName" style="margin:0"></h2>
+            <span id="stockBadge" class="badge"></span>
+          </div>
+          <div class="muted" id="pDesc"></div>
+
+          <div class="hr"></div>
+
+          <div class="priceRow">
+            <div class="price" id="priceNow"></div>
+            <div class="oldPrice" id="priceOld" style="display:none"></div>
+            <div class="discount" id="discountPct" style="display:none"></div>
+          </div>
+
+          <div class="meta" id="ratingRow"></div>
+          <div class="meta" id="shippingRow"></div>
+
+          <div class="hr"></div>
+
+          <!-- Variants -->
+          <div id="variantBlock">
+            <div class="micro"><b>Color</b></div>
+            <div class="swatches" id="swatches"></div>
+
+            <div style="height:10px"></div>
+
+            <div class="micro"><b>Talla</b></div>
+            <div class="sizes" id="sizes"></div>
+          </div>
+
+          <div class="hr"></div>
+
+          <!-- Upload design (solo para ropa) -->
+          <div id="customBlock">
+            <label class="micro"><b>Personaliza</b> (opcional)</label>
+            <label class="file">
+              <input id="designFile" type="file" accept="image/*" />
+              <span>Subir diseño (PNG/JPG)</span>
+            </label>
+
+            <div style="height:10px"></div>
+            <div class="filters">
+              <button class="btn ghost" id="btnCenter">🎯 Centrar</button>
+              <button class="btn ghost" id="btnReset">Reset</button>
+              <button class="btn ghost" id="btnRemove">Quitar diseño</button>
+            </div>
+            <div style="height:10px"></div>
+            <div class="filters">
+              <button class="btn ghost" id="btnZoomIn">Zoom +</button>
+              <button class="btn ghost" id="btnZoomOut">Zoom -</button>
+              <button class="btn ghost" id="btnRotL">⟲</button>
+              <button class="btn ghost" id="btnRotR">⟳</button>
+            </div>
+          </div>
+
+          <div class="hr"></div>
+
+          <button class="btn full" id="btnAddToCart">🛒 Agregar al carrito</button>
+          <div class="micro">El carrito guarda variante + (si hay) preview.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews mock -->
+    <section class="card" style="margin-top:16px">
+      <div class="sectionHead">
+        <div>
+          <h2>Reseñas</h2>
+          <p class="muted">Mock por ahora (cuando haya usuarios, será real).</p>
+        </div>
+      </div>
+
+      <div class="reviewsGrid" id="reviewsGrid"></div>
+    </section>
+
+    <!-- También te puede gustar -->
+    <section class="card" style="margin-top:16px">
+      <div class="sectionHead">
+        <div>
+          <h2>También te puede gustar</h2>
+          <p class="muted">Recomendaciones basadas en categoría/tags.</p>
+        </div>
+        <a class="btn soft" href="index.html#catalogo">Ver catálogo</a>
+      </div>
+
+      <div class="recoGrid" id="recoGrid"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="footerGrid">
+        <div>
+          <div class="footerTitle">Perchera del Rey</div>
+          <div class="muted">Producto • Minimal</div>
+        </div>
+        <div class="muted">© <span id="year"></span></div>
+      </div>
+    </footer>
+  </main>
+
+  <script type="module" src="js/product.js"></script>
+</body>
+</html>
